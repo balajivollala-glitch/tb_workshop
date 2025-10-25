@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Pass System - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>College Gate Pass System</h1>
+            <p class="subtitle">Select your role to continue</p>
+            
+            <div class="role-selector">
+                <select id="userSelect" class="input-field">
+                    <option value="">-- Select User --</option>
+                </select>
+                
+                <button onclick="login()" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+
+        // Load users on page load
+        window.onload = async function() {
+            try {
+                const response = await fetch(`${API_URL}/users`);
+                const users = await response.json();
+                
+                const select = document.getElementById('userSelect');
+                users.forEach(user => {
+                    const option = document.createElement('option');
+                    option.value = JSON.stringify(user);
+                    option.textContent = `${user.name} (${user.role})`;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                alert('Error connecting to server. Make sure backend is running!');
+            }
+        };
+
+        function login() {
+            const select = document.getElementById('userSelect');
+            if (!select.value) {
+                alert('Please select a user');
+                return;
+            }
+            
+            const user = JSON.parse(select.value);
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            
+            // Redirect based on role
+            if (user.role === 'student') {
+                window.location.href = 'pages/student.html';
+            } else if (user.role === 'moderator') {
+                window.location.href = 'pages/moderator.html';
+            } else if (user.role === 'gatekeeper') {
+                window.location.href = 'pages/gatekeeper.html';
+            }
+        }
+    </script>
+</body>
+</html>

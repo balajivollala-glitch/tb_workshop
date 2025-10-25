@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderator Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Moderator Dashboard</h1>
+            <button onclick="logout()" class="btn btn-secondary">Logout</button>
+        </div>
+
+        <div class="welcome-section">
+            <h2>Welcome, <span id="moderatorName"></span></h2>
+        </div>
+
+        <div class="requests-section">
+            <h3>Pending Requests</h3>
+            <div id="pendingRequests"></div>
+        </div>
+
+        <div class="requests-section">
+            <h3>All Requests History</h3>
+            <div id="allRequests"></div>
+        </div>
+    </div>
+
+    <script src="../js/moderator.js"></script>
+</body>
+</html>

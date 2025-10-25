@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "student1",
+      "password": "pass123",
+      "role": "student",
+      "name": "Rahul Kumar",
+      "department": "CSE",
+      "rollNo": "CSE001"
+    },
+    {
+      "id": 2,
+      "username": "moderator1",
+      "password": "mod123",
+      "role": "moderator",
+      "name": "Dr. Sharma"
+    },
+    {
+      "id": 3,
+      "username": "gatekeeper1",
+      "password": "gate123",
+      "role": "gatekeeper",
+      "name": "Ravi Singh"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1761376537951,
+      "studentId": 1,
+      "studentName": "Rahul Kumar",
+      "department": "CSE",
+      "rollNo": "CSE001",
+      "date": "2025-10-26",
+      "time": "14:00",
+      "parentPhone": "9876543210",
+      "parentInformed": "yes",
+      "reason": "Medical appointment at city hospital",
+      "status": "approved",
+      "remarks": "Approved - Valid medical reason",
+      "createdAt": "2025-10-25T07:15:37.951Z",
+      "approvedAt": "2025-10-25T07:24:05.055Z",
+      "exited": true,
+      "exitTime": "2025-10-25T07:32:47.511Z"
+    },
+    {
+      "id": 1761376666934,
+      "studentId": 1,
+      "studentName": "Rahul Kumar",
+      "department": "CSE",
+      "rollNo": "CSE001",
+      "date": "2025-10-27",
+      "time": "10:30",
+      "parentPhone": "9876543210",
+      "parentInformed": "yes",
+      "reason": "Family function - Sister's wedding",
+      "status": "rejected",
+      "remarks": "Rejected - Need prior permission for family events",
+      "createdAt": "2025-10-25T07:17:46.934Z",
+      "rejectedAt": "2025-10-25T07:25:23.818Z"
+    },
+    {
+      "id": 1761376760854,
+      "studentId": 1,
+      "studentName": "Rahul Kumar",
+      "department": "CSE",
+      "rollNo": "CSE001",
+      "date": "2025-10-28",
+      "time": "16:00",
+      "parentPhone": "9876543210",
+      "parentInformed": "no",
+      "reason": "Urgent personal work - Bank related",
+      "status": "pending",
+      "remarks": "",
+      "createdAt": "2025-10-25T07:19:20.854Z"
+    },
+    {
+      "id": 1761380676538,
+      "studentName": "Rahul Kumar",
+      "department": "CSE",
+      "date": "2025-10-25",
+      "time": "12:30",
+      "parentPhone": "9550215348",
+      "parentInformed": "yes",
+      "reason": "i am not feeling well.",
+      "status": "pending",
+      "remarks": "",
+      "createdAt": "2025-10-25T08:24:36.538Z"
+    },
+    {
+      "id": 1761381875787,
+      "studentName": "Rahul Kumar",
+      "department": "CSE",
+      "date": "2025-10-25",
+      "time": "12:30",
+      "parentPhone": "9550215348",
+      "parentInformed": "yes",
+      "reason": "fever.",
+      "status": "pending",
+      "remarks": "",
+      "createdAt": "2025-10-25T08:44:35.787Z"
+    }
+  ]
+}
